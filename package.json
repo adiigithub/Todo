@@ -1,0 +1,24 @@
+{
+  "name": "adi-todo",
+  "version": "1.0.0",
+  "description": "*in this reprositorie there have two file first html and second node js the html frontend code is not opening on localhost and it is also not sending any request to backend so tell me about what my mistake in these code*",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adiigithub/Todo.git"
+  },
+  "author": "Aditya Tripathi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adiigithub/Todo/issues"
+  },
+  "homepage": "https://github.com/adiigithub/Todo#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  }
+}

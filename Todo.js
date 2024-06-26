@@ -1,5 +1,5 @@
-const express = require('express');
-const bodyParser = require('body-parser');
+const express = require("express");
+const bodyParser = require("body-parser");
 const path = require("path");
 const app = express();
 //const cros=require('cros')
@@ -18,19 +18,19 @@ function removeAtIndex(arr, index) {
   }
   return newArray;
 }
-app.get('/todos', (req, res) => {
+app.get("/todos", (req, res) => {
   res.json(todos);
 });
-app.post('/todos', (req, res) => {
+app.post("/todos", (req, res) => {
   const newTodo = {
     id: Math.floor(Math.random() * 1000000), // unique random id
     title: req.body.title,
-    description: req.body.description
+    description: req.body.description,
   };
   todos.push(newTodo);
   res.status(201).json(newTodo);
 });
-app.delete('/todos/:id', (req, res) => {
+app.delete("/todos/:id", (req, res) => {
   const todoIndex = findIndex(todos, parseInt(req.params.id));
   if (todoIndex === -1) {
     res.status(404).send();
@@ -39,6 +39,9 @@ app.delete('/todos/:id', (req, res) => {
     res.status(200).send();
   }
 });
+// here you have added extra space after '/'
+// app.get("/ ",()=>{})
+
 app.get("/ ", (req, res) => {
   res.sendFile(path.join(__dirname, "index.html"));
 });
@@ -46,4 +49,4 @@ app.get("/ ", (req, res) => {
 //app.use((req, res, next) => {
 //res.status(404).send();
 //});
-app.listen(3000);   
+app.listen(3000);
